@@ -123,6 +123,13 @@ section { padding: 6rem 0; }
 .offer-body .more { margin-top: auto; font-weight: 600; font-size: .92rem; text-decoration: none; }
 .offer-body .more::after { content: " →"; }
 
+/* Du site à la parcelle */
+.scales { padding-top: 0; }
+.scales-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.scale { background: #fff; border-radius: var(--radius); padding: 2rem 2rem 1.6rem; position: relative; }
+.scale .num { font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: var(--sable); display: block; margin-bottom: .4rem; }
+.scale .out { font-size: .9rem; font-weight: 600; color: var(--terre); border-top: 1px solid rgba(81,91,37,.15); padding-top: .9rem; margin: 1.2rem 0 0; }
+
 /* Groupements */
 .consortium { background: var(--olive); color: rgba(255,255,255,.9); }
 .consortium h2 { color: #fff; }
@@ -190,7 +197,7 @@ section { padding: 6rem 0; }
 
 /* Responsive */
 @media (max-width: 960px) {
-  .offers, .audiences { grid-template-columns: 1fr; }
+  .offers, .audiences, .scales-grid { grid-template-columns: 1fr; }
   .approach-grid, .team-grid, .footer-grid, .consortium-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .projects { grid-template-columns: 1fr; }
   .nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--papier); flex-direction: column; padding: 1.5rem; gap: 1.2rem; border-bottom: 1px solid rgba(81,91,37,.15); }
