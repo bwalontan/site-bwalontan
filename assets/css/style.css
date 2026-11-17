@@ -137,6 +137,9 @@ section { padding: 6rem 0; }
 .approach { background: var(--creme); }
 .approach-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center; }
 .approach-grid img { border-radius: var(--radius); aspect-ratio: 4/5; object-fit: cover; }
+.design-note { background: var(--papier); border-left: 3px solid var(--orange); padding: 1.1rem 1.3rem; margin: 1.6rem 0 .4rem; border-radius: 0 var(--radius) var(--radius) 0; }
+.design-note strong { display: block; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--olive); margin-bottom: .3rem; }
+.design-note p { margin: 0; font-size: .97rem; }
 .principles { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.4rem; }
 .principles li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; }
 .principles .num { font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--terre); }
