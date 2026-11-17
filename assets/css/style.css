@@ -123,6 +123,16 @@ section { padding: 6rem 0; }
 .offer-body .more { margin-top: auto; font-weight: 600; font-size: .92rem; text-decoration: none; }
 .offer-body .more::after { content: " →"; }
 
+/* Groupements */
+.consortium { background: var(--olive); color: rgba(255,255,255,.9); }
+.consortium h2 { color: #fff; }
+.consortium .eyebrow { color: var(--creme); }
+.consortium strong { color: #fff; }
+.consortium-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+.consortium-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.2rem; }
+.consortium-list li { border-left: 3px solid var(--orange); padding: .3rem 0 .3rem 1.2rem; font-size: .95rem; }
+.consortium-list strong { display: block; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--creme); margin-bottom: .2rem; }
+
 /* Approche */
 .approach { background: var(--creme); }
 .approach-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center; }
@@ -178,7 +188,7 @@ section { padding: 6rem 0; }
 /* Responsive */
 @media (max-width: 960px) {
   .offers, .audiences { grid-template-columns: 1fr; }
-  .approach-grid, .team-grid, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .approach-grid, .team-grid, .footer-grid, .consortium-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .projects { grid-template-columns: 1fr; }
   .nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--papier); flex-direction: column; padding: 1.5rem; gap: 1.2rem; border-bottom: 1px solid rgba(81,91,37,.15); }
   .nav.open { display: flex; }
