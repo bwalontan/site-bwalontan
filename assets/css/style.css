@@ -1,0 +1,195 @@
+/* Bwa Lontan — feuille de style principale
+   Charte : Cormorant Upright (titres), Montserrat (texte)
+   Couleurs issues de la charte graphique (agence-nomade, 2023) */
+
+@font-face { font-family: "Cormorant Upright"; src: url("../fonts/cormorant-upright-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Cormorant Upright"; src: url("../fonts/cormorant-upright-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Cormorant Upright"; src: url("../fonts/cormorant-upright-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("../fonts/montserrat-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("../fonts/montserrat-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("../fonts/montserrat-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+:root {
+  --olive: #515b25;      /* vert foncé — couleur principale */
+  --sauge: #7c8c5b;      /* vert sauge */
+  --sable: #b5a26f;      /* sable */
+  --creme: #e7dbb7;      /* crème */
+  --blanc: #f2f2f2;      /* blanc cassé */
+  --anthracite: #404040; /* texte */
+  --terre: #8f5243;      /* terre cuite foncée */
+  --corail: #ce6b4d;     /* corail */
+  --orange: #c66b2a;     /* orange brûlé */
+  --papier: #faf7ee;     /* fond clair dérivé du crème */
+
+  --serif: "Cormorant Upright", Georgia, serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 1200px;
+  --radius: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--anthracite);
+  background: var(--papier);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--olive); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--olive); line-height: 1.1; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); }
+h2 { font-size: clamp(2.1rem, 4vw, 3.1rem); }
+h3 { font-size: 1.7rem; }
+p { margin: 0 0 1em; }
+
+.container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+.eyebrow {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--terre);
+  margin-bottom: .9rem; display: block;
+}
+.lead { font-size: 1.15rem; max-width: 46rem; }
+
+/* Boutons */
+.btn {
+  display: inline-block; padding: .9rem 1.5rem; border-radius: var(--radius);
+  font-weight: 600; font-size: .95rem; text-decoration: none; transition: background .2s, color .2s;
+}
+.btn-primary { background: var(--orange); color: #fff; }
+.btn-primary:hover { background: var(--terre); }
+.btn-ghost { border: 1.5px solid currentColor; color: #fff; }
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
+.btn-olive { background: var(--olive); color: #fff; }
+.btn-olive:hover { background: #3f4720; }
+
+/* En-tête */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250,247,238,.96); backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(81,91,37,.12);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.brand img { height: 52px; width: auto; }
+.brand span { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; color: var(--olive); line-height: 1; }
+.brand-light span { color: var(--creme); }
+.site-footer .brand img { height: 64px; margin: 0; }
+.site-footer .brand { margin-bottom: 1.2rem; }
+.nav { display: flex; align-items: center; gap: 1.8rem; }
+.nav a { text-decoration: none; font-size: .92rem; font-weight: 500; color: var(--anthracite); }
+.nav a:hover { color: var(--olive); }
+.nav .btn { color: #fff; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 1.6rem; color: var(--olive); cursor: pointer; }
+
+/* Hero */
+.hero {
+  position: relative; min-height: 86vh; display: flex; align-items: flex-end;
+  color: #fff; overflow: hidden;
+}
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(30,34,14,.82) 0%, rgba(30,34,14,.55) 45%, rgba(30,34,14,.05) 80%), linear-gradient(180deg, rgba(30,34,14,0) 50%, rgba(30,34,14,.6) 100%);
+}
+.hero .container { position: relative; z-index: 1; padding-block: 5rem 5rem; }
+.hero .container > * { max-width: 40rem; }
+.hero h1 { color: #fff; max-width: 17ch; }
+.hero .lead { color: rgba(255,255,255,.92); }
+.hero .eyebrow { color: var(--creme); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
+
+/* Bandeau confiance */
+.trust { background: var(--olive); color: var(--creme); padding: 1.6rem 0; }
+.trust .container { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 2.4rem; }
+.trust span.label { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; opacity: .8; }
+.trust ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem 2.2rem; }
+.trust li { font-family: var(--serif); font-size: 1.35rem; color: #fff; }
+
+/* Sections */
+section { padding: 6rem 0; }
+.section-head { max-width: 50rem; margin-bottom: 3rem; }
+
+/* Offres */
+.offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.offer { background: #fff; border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.offer img { aspect-ratio: 4/3; object-fit: cover; }
+.offer-body { padding: 1.6rem 1.6rem 1.8rem; display: flex; flex-direction: column; flex: 1; }
+.offer-body ul { padding-left: 1.1rem; margin: 0 0 1.2rem; font-size: .95rem; }
+.offer-body li { margin-bottom: .3rem; }
+.offer-body .more { margin-top: auto; font-weight: 600; font-size: .92rem; text-decoration: none; }
+.offer-body .more::after { content: " →"; }
+
+/* Approche */
+.approach { background: var(--creme); }
+.approach-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center; }
+.approach-grid img { border-radius: var(--radius); aspect-ratio: 4/5; object-fit: cover; }
+.principles { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.4rem; }
+.principles li { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; }
+.principles .num { font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--terre); }
+.principles strong { display: block; color: var(--olive); font-size: 1.02rem; margin-bottom: .2rem; }
+
+/* Pour qui */
+.audiences { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.audience { border-top: 3px solid var(--sauge); padding-top: 1.4rem; }
+.audience:nth-child(2) { border-color: var(--orange); }
+.audience:nth-child(3) { border-color: var(--terre); }
+.audience p { font-size: .97rem; }
+
+/* Réalisations */
+.projects-section { background: #fff; }
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.project { display: grid; grid-template-columns: 200px 1fr; gap: 1.4rem; background: var(--papier); border-radius: var(--radius); overflow: hidden; }
+.project img { height: 100%; width: 100%; object-fit: cover; min-height: 220px; }
+.project-body { padding: 1.4rem 1.4rem 1.4rem 0; }
+.project .tag { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); }
+.project h3 { font-size: 1.5rem; margin: .4rem 0 .5rem; }
+.project p { font-size: .93rem; margin: 0; }
+.todo { background: #fff3cd; color: #6b5300; font-size: .78rem; padding: .1rem .35rem; border-radius: 3px; }
+
+/* Équipe */
+.team-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+.team-grid > img { border-radius: var(--radius); }
+.people { display: grid; gap: 1.4rem; margin-top: 1.5rem; }
+.person strong { font-family: var(--serif); font-size: 1.5rem; color: var(--olive); font-weight: 600; }
+.person span { display: block; font-size: .9rem; color: var(--terre); font-weight: 500; }
+
+/* Contact */
+.cta { position: relative; color: #fff; text-align: center; overflow: hidden; }
+.cta > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta::after { content: ""; position: absolute; inset: 0; background: rgba(64,48,30,.72); }
+.cta .container { position: relative; z-index: 1; max-width: 46rem; }
+.cta h2 { color: #fff; }
+.cta .eyebrow { color: var(--creme); }
+
+/* Pied de page */
+.site-footer { background: #2f3416; color: rgba(242,236,214,.85); padding: 4rem 0 2rem; font-size: .9rem; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; }
+.site-footer img { height: 60px; width: auto; margin-bottom: 1rem; }
+.site-footer h4 { font-family: var(--sans); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--creme); margin: 0 0 1rem; }
+.site-footer a { color: rgba(242,236,214,.85); text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+.site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
+.legal { border-top: 1px solid rgba(242,236,214,.15); margin-top: 3rem; padding-top: 1.5rem; font-size: .78rem; opacity: .75; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .offers, .audiences { grid-template-columns: 1fr; }
+  .approach-grid, .team-grid, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .projects { grid-template-columns: 1fr; }
+  .nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--papier); flex-direction: column; padding: 1.5rem; gap: 1.2rem; border-bottom: 1px solid rgba(81,91,37,.15); }
+  .nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  section { padding: 4rem 0; }
+}
+@media (max-width: 560px) {
+  .hero::after { background: linear-gradient(180deg, rgba(30,34,14,.35) 0%, rgba(30,34,14,.85) 70%); }
+  .brand span { font-size: 1.6rem; }
+  .project { grid-template-columns: 1fr; }
+  .project img { min-height: 0; aspect-ratio: 16/9; }
+  .project-body { padding: 0 1.4rem 1.4rem; }
+  .hero { min-height: 78vh; }
+}
