@@ -203,6 +203,15 @@ section { padding: 6rem 0; }
 .principles .num { font-family: var(--serif); font-size: 2.4rem; line-height: 1; color: var(--terre); }
 .principles strong { display: block; color: var(--olive); font-size: 1.02rem; margin-bottom: .2rem; }
 
+.approach-fig { margin: 0 auto 2.6rem; max-width: 760px; }
+.approach-fig img { width: 100%; border-radius: var(--radius); }
+.principles-3 { grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 0; }
+.principles-3 li { display: block; border-top: 2px solid var(--sable); padding-top: 1rem; }
+.principles-3 .num { display: block; font-size: 2rem; margin-bottom: .3rem; }
+.principles-3 strong { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; }
+.principles-3 p { font-size: .93rem; margin: .3rem 0 0; }
+@media (max-width: 960px) { .principles-3 { grid-template-columns: 1fr; } }
+
 /* Pour qui */
 .audiences { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .audience { border-top: 3px solid var(--sauge); padding-top: 1.4rem; }
