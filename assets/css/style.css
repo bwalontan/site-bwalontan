@@ -210,6 +210,12 @@ section { padding: 6rem 0; }
 .audience:nth-child(3) { border-color: var(--terre); }
 .audience p { font-size: .97rem; }
 
+.audience-band { padding: 3rem 0; }
+.audience-band .eyebrow { text-align: center; margin-bottom: 1.4rem; }
+.audience-band .audience { padding-top: 1rem; }
+.audience-band h3 { font-size: 1.35rem; margin-bottom: .3rem; }
+.audience-band p { font-size: .92rem; margin: 0; }
+
 /* Réalisations */
 .projects-section { background: #fff; }
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
