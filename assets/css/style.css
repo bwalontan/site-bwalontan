@@ -127,6 +127,9 @@ section { padding: 6rem 0; }
 .scales { padding-top: 0; }
 .scales-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .scale { background: #fff; border-radius: var(--radius); padding: 2rem 2rem 1.6rem; position: relative; }
+.scale figure { margin: -2rem -2rem 1.4rem; background: var(--creme); }
+.scale figure img { width: 100%; aspect-ratio: 1.414; object-fit: contain; }
+.scale figcaption { font-size: .78rem; color: var(--terre); padding: .5rem 1rem .6rem; }
 .scale .num { font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: var(--sable); display: block; margin-bottom: .4rem; }
 .scale .out { font-size: .9rem; font-weight: 600; color: var(--terre); border-top: 1px solid rgba(81,91,37,.15); padding-top: .9rem; margin: 1.2rem 0 0; }
 
