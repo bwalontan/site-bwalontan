@@ -144,8 +144,22 @@ section { padding: 6rem 0; }
 .scale .num { font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange) !important; margin-bottom: .5rem; } .scale .num-old { font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: var(--sable); display: block; margin-bottom: .4rem; }
 .scale .out { font-size: .9rem; font-weight: 600; color: var(--terre); border-top: 1px solid rgba(81,91,37,.15); padding-top: .9rem; margin: 1.2rem 0 0; }
 
+/* Conception compacte */
+#conception { margin-top: 5rem; }
+.design-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 2.5rem; align-items: center; }
+.design-fig { margin: 0; background: var(--creme); border-radius: var(--radius); overflow: hidden; }
+.design-fig img { width: 100%; }
+.design-fig figcaption { font-size: .78rem; color: var(--terre); padding: .5rem 1rem .6rem; }
+.design-options { display: grid; gap: 1.2rem; }
+.design-opt { background: #fff; border-radius: var(--radius); padding: 1.3rem 1.5rem; }
+.design-opt .num { font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); }
+.design-opt h3 { font-size: 1.5rem; margin: .2rem 0 .4rem; }
+.design-opt p { font-size: .93rem; margin: 0 0 .6rem; }
+.design-opt .out { font-size: .85rem; font-weight: 600; color: var(--terre); margin: 0; }
+@media (max-width: 960px) { .design-grid { grid-template-columns: 1fr; } }
+
 /* Frise */
-.timeline-section { padding-top: 0; }
+.timeline { margin-top: 1rem; }
 .timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.4rem; position: relative; }
 .timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 2.35rem; height: 2px; background: var(--sable); }
 .timeline li { position: relative; }
