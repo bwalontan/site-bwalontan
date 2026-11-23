@@ -125,6 +125,10 @@ section { padding: 6rem 0; }
 .offer-body .more::after { content: " →"; }
 
 /* Du site à la parcelle */
+.sub-head { font-size: 2rem; margin: 0 0 .4rem; }
+.sub-lead { max-width: 46rem; margin-bottom: 2rem; }
+.offers-2 { grid-template-columns: repeat(2, 1fr); margin-top: 3rem; }
+.offers-2 .offer img { aspect-ratio: 16/9; }
 .scales { padding-top: 0; }
 .scales-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .scale { background: #fff; border-radius: var(--radius); padding: 2rem 2rem 1.6rem; position: relative; }
@@ -201,7 +205,7 @@ section { padding: 6rem 0; }
 
 /* Responsive */
 @media (max-width: 960px) {
-  .offers, .audiences, .scales-grid { grid-template-columns: 1fr; }
+  .offers, .offers-2, .audiences, .scales-grid { grid-template-columns: 1fr; }
   .approach-grid, .team-grid, .footer-grid, .consortium-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .projects { grid-template-columns: 1fr; }
   .nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--papier); flex-direction: column; padding: 1.5rem; gap: 1.2rem; border-bottom: 1px solid rgba(81,91,37,.15); }
