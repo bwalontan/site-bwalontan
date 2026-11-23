@@ -185,6 +185,12 @@ section { padding: 6rem 0; }
 .consortium-list li { border-left: 3px solid var(--orange); padding: .3rem 0 .3rem 1.2rem; font-size: .95rem; }
 .consortium-list strong { display: block; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--creme); margin-bottom: .2rem; }
 
+.consortium { padding: 3rem 0; }
+.consortium-band { display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: center; }
+.consortium-band h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin-bottom: .6rem; }
+.consortium-band p { margin: 0; max-width: 52rem; font-size: .97rem; }
+@media (max-width: 960px) { .consortium-band { grid-template-columns: 1fr; gap: 1.4rem; } .consortium-band .btn { justify-self: start; } }
+
 /* Approche */
 .approach { background: var(--creme); }
 .approach-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center; }
