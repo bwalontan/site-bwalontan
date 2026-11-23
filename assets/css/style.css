@@ -214,7 +214,9 @@ section { padding: 6rem 0; }
 .audience-band .eyebrow { text-align: center; margin-bottom: 1.4rem; }
 .audience-band .audience { padding-top: 1rem; }
 .audience-band h3 { font-size: 1.35rem; margin-bottom: .3rem; }
-.audience-band p { font-size: .92rem; margin: 0; }
+.audience-band p { font-size: .92rem; margin: 0 0 .7rem; }
+.audience-band .more { font-weight: 600; font-size: .88rem; text-decoration: none; }
+.audience-band .more::after { content: " →"; }
 
 /* Réalisations */
 .projects-section { background: #fff; }
