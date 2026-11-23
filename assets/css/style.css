@@ -66,6 +66,11 @@ p { margin: 0 0 1em; }
 .btn-olive { background: var(--olive); color: #fff; }
 .btn-olive:hover { background: #3f4720; }
 
+.btn-line { border: 1.5px solid var(--olive); color: var(--olive); }
+.btn-line:hover { background: rgba(81,91,37,.08); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.2rem; }
+.consortium .btn { margin-top: .6rem; }
+
 /* En-tête */
 .site-header {
   position: sticky; top: 0; z-index: 50;

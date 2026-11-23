@@ -16,11 +16,11 @@
     <a class="brand" href="/" aria-label="Bwa Lontan, accueil"><img src="assets/img/emblem.png" alt=""><span>Bwa lontan</span></a>
     <button class="nav-toggle" aria-label="Ouvrir le menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="#offres">Conception &amp; accompagnement</a>
-      <a href="#offres">Formations</a>
+      <a href="#conception">Conception &amp; accompagnement</a>
+      <a href="#formations">Formations</a>
       <a href="#realisations">Réalisations</a>
       <a href="#approche">Notre approche</a>
-      <a href="#equipe">L'équipe</a>
+      <a href="#equipe">Qui sommes-nous</a>
       <a class="btn btn-primary" href="#contact">Nous contacter</a>
     </nav>
   </div>
@@ -51,7 +51,7 @@
         <p class="lead">Chaque projet est différent : le sol, la pente, l'altitude, l'eau, vos objectifs et votre modèle économique décident du système. Nous intervenons à chaque étape, ou seulement là où vous en avez besoin.</p>
       </div>
 
-      <h3 class="sub-head">Concevoir : deux échelles possibles</h3>
+      <h3 class="sub-head" id="conception">Concevoir : deux échelles possibles</h3>
       <p class="sub-lead">En tant que bureau d'études, nous intervenons à l'échelle de la ferme, de la parcelle, ou des deux, selon votre projet et vos besoins réels. Chaque mission débouche sur des livrables clairs.</p>
       <div class="scales-grid">
         <div class="scale">
@@ -70,6 +70,11 @@
         </div>
       </div>
 
+      <div class="cta-row">
+        <a class="btn btn-olive" href="mailto:contact@bwalontan.re?subject=Demande%20d%27%C3%A9tude%20de%20conception">Demander une étude de conception</a>
+        <a class="btn btn-line" href="#deroule">Voir le déroulé d'un projet</a>
+      </div>
+
       <div class="offers offers-2">
         <article class="offer">
           <img src="assets/img/atelier-conception-parcelle.jpg" alt="Atelier de conception : des participants dessinent le plan de plantation d'une parcelle agroforestière avec des gommettes de couleur">
@@ -81,10 +86,10 @@
               <li>Ajustement du système au fil des saisons</li>
               <li>Montage de projets et recherche de financements</li>
             </ul>
-            <a class="more" href="#contact">Être accompagné</a>
+            <a class="more" href="mailto:contact@bwalontan.re?subject=Demande%20de%20suivi%20et%20accompagnement">Demander un accompagnement</a>
           </div>
         </article>
-        <article class="offer">
+        <article class="offer" id="formations">
           <img src="assets/img/amandine-formation-salle.jpg" alt="Amandine anime une formation en salle sur les consortiums d'espèces">
           <div class="offer-body">
             <h3>Formations</h3>
@@ -94,7 +99,7 @@
               <li>Contenus adaptés au public : GIEE, groupements d'agriculteurs, tout public</li>
               <li>Formats d'une journée à plusieurs jours, théorie en salle et pratique sur parcelle</li>
             </ul>
-            <a class="more" href="#contact">Voir les formations</a>
+            <a class="more" href="mailto:contact@bwalontan.re?subject=Demande%20de%20programme%20de%20formation">Demander le programme</a>
           </div>
         </article>
       </div>
@@ -109,7 +114,7 @@
         <h2>De l'étude aux récoltes</h2>
         <p class="lead">Les grandes étapes d'un accompagnement. Selon votre projet, nous intervenons sur l'ensemble du parcours ou sur certaines étapes seulement.</p>
       </div>
-      <ol class="timeline">
+      <ol class="timeline" id="deroule">
         <li><span class="phase">Étude</span><span class="dot"></span><h3>Diagnostic</h3><p>Visite du site, lecture du sol, de l'eau et du relief. Vos objectifs, vos moyens et vos contraintes économiques.</p></li>
         <li><span class="phase">Étude</span><span class="dot"></span><h3>Co-conception</h3><p>Des ateliers avec vous pour construire le projet : scénarios, choix des espèces, modèle économique.</p></li>
         <li><span class="phase">Étude</span><span class="dot"></span><h3>Livrables</h3><p>Plans, phasage, chiffrage et itinéraire de conduite, prêts pour décider et rechercher des financements.</p></li>
@@ -117,6 +122,9 @@
         <li><span class="phase">Conduite</span><span class="dot"></span><h3>Gestion et tailles</h3><p>Calendrier de tailles, gestion de la biomasse et ajustements du système au fil des saisons.</p></li>
         <li><span class="phase">Conduite</span><span class="dot"></span><h3>Récoltes et suivi</h3><p>Premières récoltes, suivi des indicateurs et évolution du système dans le temps.</p></li>
       </ol>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:contact@bwalontan.re?subject=Demande%20de%20diagnostic">Commencer par un diagnostic</a>
+      </div>
     </div>
   </section>
 
@@ -128,6 +136,7 @@
         <h2>Pour les projets d'envergure, nous travaillons en groupement</h2>
         <p>Appels à projets, programmes de territoire, aménagements complexes : quand un projet croise plusieurs disciplines, nous constituons une équipe avec les experts dont il a besoin, par exemple en hydrologie régénérative ou en science des sols.</p>
         <p>Bwa Lontan y porte <strong>la stratégie végétale et la stratégie économique</strong> : choix des espèces, conception des systèmes agroforestiers et agroécologiques, trajectoire de production et viabilité dans le temps.</p>
+        <a class="btn btn-primary" href="mailto:contact@bwalontan.re?subject=Appel%20%C3%A0%20projets%20%3A%20proposition%20de%20groupement">Nous associer à un appel à projets</a>
       </div>
       <ul class="consortium-list">
         <li><strong>Une équipe sur mesure</strong>Les compétences réunies selon les enjeux du site : eau, sol, végétal, production.</li>
@@ -248,7 +257,7 @@
       <h2>Parlons de votre projet</h2>
       <p class="lead" style="margin-inline:auto">Conception, formation ou accompagnement : décrivez-nous votre terrain et vos objectifs, nous revenons vers vous sous quelques jours.</p>
       <div class="hero-actions" style="justify-content:center">
-        <a class="btn btn-primary" href="mailto:contact@bwalontan.re">contact@bwalontan.re</a>
+        <a class="btn btn-primary" href="mailto:contact@bwalontan.re?subject=Prise%20de%20contact%20depuis%20le%20site">contact@bwalontan.re</a>
         <a class="btn btn-ghost" href="tel:+262693513993">06 93 51 39 93</a>
       </div>
     </div>
@@ -266,11 +275,11 @@
       <div>
         <h4>Le site</h4>
         <ul>
-          <li><a href="#offres">Conception &amp; accompagnement</a></li>
-          <li><a href="#offres">Formations</a></li>
+          <li><a href="#conception">Conception &amp; accompagnement</a></li>
+          <li><a href="#formations">Formations</a></li>
           <li><a href="#realisations">Réalisations</a></li>
           <li><a href="#approche">Notre approche</a></li>
-          <li><a href="#equipe">L'équipe</a></li>
+          <li><a href="#equipe">Qui sommes-nous</a></li>
         </ul>
       </div>
       <div>
