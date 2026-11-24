@@ -18,7 +18,7 @@
   --anthracite: #404040; /* texte */
   --terre: #8f5243;      /* terre cuite foncée */
   --corail: #ce6b4d;     /* corail */
-  --orange: #c66b2a;     /* orange brûlé */
+  --orange: #a9561c;     /* orange brûlé */
   --papier: #faf7ee;     /* fond clair dérivé du crème */
 
   --serif: "Cormorant Upright", Georgia, serif;
@@ -40,6 +40,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: var(--olive); }
+h1, h2, h3 { text-wrap: balance; } 
 h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--olive); line-height: 1.1; margin: 0 0 .5em; }
 h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); }
 h2 { font-size: clamp(2.1rem, 4vw, 3.1rem); }
@@ -204,7 +205,8 @@ section { padding: 6rem 0; }
 .principles strong { display: block; color: var(--olive); font-size: 1.02rem; margin-bottom: .2rem; }
 
 .approach-fig { margin: 0 auto 2.6rem; max-width: 760px; }
-.approach-fig img { width: 100%; border-radius: var(--radius); }
+.approach-fig { overflow: hidden; border-radius: var(--radius); }
+.approach-fig img { width: 106.5%; max-width: none; margin-left: -3.25%; }
 .principles-3 { grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 0; }
 .principles-3 li { display: block; border-top: 2px solid var(--sable); padding-top: 1rem; }
 .principles-3 .num { display: block; font-size: 2rem; margin-bottom: .3rem; }
