@@ -11,11 +11,15 @@ Statut : maquette de la page d'accueil, en cours de validation.
 
 ## Mise en ligne (o2switch)
 
-- `contact.php` : traitement du formulaire (PHP `mail()`), envoi vers contact@bwalontan.re. Fonctionne uniquement sur un hébergement PHP. L'adresse d'expédition `site@bwalontan.re` doit exister ou être autorisée sur le domaine.
+- `contact.php` : traitement du formulaire (PHP `mail()`), envoi vers contact@bwalontan.re. Fonctionne uniquement sur un hébergement PHP. Les e-mails du domaine sont hébergés hors o2switch : si les messages arrivent en spam, ajouter o2switch à l'enregistrement SPF.
 - `.htaccess` : HTTPS + www, redirection des anciennes adresses WordPress, page 404, cache.
 - `sitemap.xml` et `robots.txt` à déclarer dans Google Search Console.
 
 ## Mise en ligne automatique
 
-`.github/workflows/deploy.yml` envoie le site par FTPS à chaque modification de `main`.
-Secrets GitHub requis : `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (compte FTP o2switch limité au dossier du site).
+C'est le serveur o2switch qui va chercher le site sur GitHub (dépôt public, aucun mot de passe stocké chez GitHub).
+
+- cPanel › Git Version Control : clone de ce dépôt dans `~/repositories/site-bwalontan`.
+- cPanel › Tâches Cron : toutes les 15 minutes, `sh ~/repositories/site-bwalontan/deploy.sh` (ou avec le dossier cible en argument).
+- `deploy.sh` récupère `main` puis copie les fichiers dans le dossier du site (par défaut `~/nouveau.bwalontan.re`, sous-domaine de test).
+- Délai entre une modification sur `main` et sa mise en ligne : 15 minutes au maximum.
