@@ -2,9 +2,12 @@
 
 RewriteEngine On
 
-# Forcer HTTPS et www
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\. [NC]
+# Forcer HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Domaine nu -> www (les sous-domaines comme nouveau.bwalontan.re ne sont pas concernés)
+RewriteCond %{HTTP_HOST} ^bwalontan\.re$ [NC]
 RewriteRule ^(.*)$ https://www.bwalontan.re/$1 [L,R=301]
 
 # Anciennes adresses de l'ancien site WordPress
