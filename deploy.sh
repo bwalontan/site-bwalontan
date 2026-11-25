@@ -10,7 +10,8 @@ cd "$DEPOT"
 git fetch -q origin main
 git reset -q --hard origin/main
 
-rsync -a --delete \
+# -rlt : ne pas recopier les droits du dossier du dépôt (0700) ; droits web standard imposés
+rsync -rlt --delete --chmod=D755,F644 \
   --exclude '.git/' --exclude '.github/' --exclude 'README.md' --exclude 'deploy.sh' \
   --exclude '.well-known/' --exclude 'cgi-bin/' --exclude '.user.ini' --exclude 'error_log' \
   "$DEPOT/" "$CIBLE/"
