@@ -73,6 +73,6 @@ $entetes = [
     'Content-Transfer-Encoding: 8bit',
 ];
 
-$ok = mail($destinataire, '=?UTF-8?B?' . base64_encode($sujet) . '?=', $corps, implode("\r\n", $entetes));
+$ok = mail($destinataire, '=?UTF-8?B?' . base64_encode($sujet) . '?=', $corps, implode("\r\n", $entetes), "-f site@bwalontan.re");
 
 retour($ok ? 'ok' : 'erreur');
