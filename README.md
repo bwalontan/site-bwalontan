@@ -20,6 +20,7 @@ Statut : maquette de la page d'accueil, en cours de validation.
 C'est le serveur o2switch qui va chercher le site sur GitHub (dépôt public, aucun mot de passe stocké chez GitHub).
 
 - cPanel › Git Version Control : clone de ce dépôt dans `~/repositories/site-bwalontan`.
-- cPanel › Tâches Cron : toutes les 15 minutes, `sh ~/repositories/site-bwalontan/deploy.sh` (ou avec le dossier cible en argument).
+- cPanel › Tâches Cron : toutes les 15 minutes, `deploy.sh ~/www.bwalontan.re` (site en ligne) puis `deploy.sh ~/nouveau.bwalontan.re` (site de test, non indexé).
+- Le domaine bwalontan.re pointe vers `~/www.bwalontan.re` (cPanel › Domaines). L'ancien WordPress est conservé intact dans `~/public_html` : pour revenir en arrière, remettre `public_html` comme racine du domaine.
 - `deploy.sh` récupère `main` puis copie les fichiers dans le dossier du site (par défaut `~/nouveau.bwalontan.re`, sous-domaine de test).
 - Délai entre une modification sur `main` et sa mise en ligne : 15 minutes au maximum.
