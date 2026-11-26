@@ -17,6 +17,13 @@ RewriteRule ^wp-(admin|login\.php|content|includes) / [R=301,L]
 # Page 404
 ErrorDocument 404 /404.html
 
+# Le sous-domaine de test ne doit pas être indexé par les moteurs de recherche
+<IfModule mod_headers.c>
+  SetEnvIfNoCase Host ^nouveau\. NOINDEX
+  Header set X-Robots-Tag "noindex, nofollow" env=NOINDEX
+</IfModule>
+
+
 # Cache des fichiers statiques
 <IfModule mod_expires.c>
   ExpiresActive On
